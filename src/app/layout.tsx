@@ -26,9 +26,9 @@ export default function RootLayout({
       </head>
       <body className="h-screen w-screen">
         <Providers>
-          <div className="grid h-full min-h-screen w-full grid-rows-[auto_1fr_auto]">
+          <div className="grid h-full min-h-screen w-full grid-rows-[auto_1fr_auto] before:absolute before:inset-0 before:-z-10 before:bg-[url(/light-bg.svg)] before:bg-cover before:bg-repeat before:opacity-35 sm:px-20 dark:before:bg-[url(/dark-bg.svg)] dark:before:opacity-20">
             <Header />
-            <main className="relative row-start-2 flex h-full w-full flex-col gap-[32px] overflow-auto px-8 before:absolute before:inset-0 before:-z-10 before:bg-[url(/light-bg.svg)] before:bg-cover before:bg-repeat before:opacity-10 sm:px-20 dark:before:bg-[url(/dark-bg.svg)] dark:before:opacity-20">
+            <main className="relative row-start-2 flex h-full w-full flex-col gap-[32px] overflow-auto px-8">
               {children}
             </main>
             <Footer />
