@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 import Footer from "@/components/footer";
+import Header from "@/components/header";
 import Providers from "@/components/providers";
-import { ModeToggle } from "@/components/ui/theme-switcher";
 
 import "./globals.css";
 
@@ -24,13 +24,11 @@ export default function RootLayout({
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏎️</text></svg>"
         />
       </head>
-      <body className={"antialiased"}>
+      <body className="h-screen w-screen">
         <Providers>
-          <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 sm:p-20">
-            <header>
-              <ModeToggle />
-            </header>
-            <main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
+          <div className="grid h-full min-h-screen w-full grid-rows-[auto_1fr_auto]">
+            <Header />
+            <main className="relative row-start-2 flex h-full w-full flex-col gap-[32px] overflow-auto px-8 before:absolute before:inset-0 before:-z-10 before:bg-[url(/light-bg.svg)] before:bg-cover before:bg-repeat before:opacity-10 sm:px-20 dark:before:bg-[url(/dark-bg.svg)] dark:before:opacity-20">
               {children}
             </main>
             <Footer />
