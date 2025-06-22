@@ -14,14 +14,14 @@
 
 ## Tasks
 
-- [ ] 1.0 Setup Mock Data and Types
+- [x] 1.0 Setup Mock Data and Types
   - [x] 1.1 Define `Race` and `Review` types in `src/lib/types.ts`.
   - [x] 1.2 Create mock data for one sample Grand Prix and several reviews in `src/lib/mock-data.ts`.
-- [ ] 2.0 Create the Race Review Page Structure
-  - [ ] 2.1 Create the directory `src/app/races/[raceId]`.
-  - [ ] 2.2 Create the page file `src/app/races/[raceId]/page.tsx`.
-  - [ ] 2.3 Add a basic layout to the page, including a heading for the race name.
-  - [ ] 2.4 Fetch the mock race data and pass it as a prop to the page component.
+- [x] 2.0 Create the Race Review Page Structure
+  - [x] 2.1 Create the directory `src/app/races/[raceId]`.
+  - [x] 2.2 Create the page file `src/app/races/[raceId]/page.tsx`.
+  - [x] 2.3 Add a basic layout to the page, including a heading for the race name.
+  - [x] 2.4 Fetch the mock race data and pass it as a prop to the page component.
 - [ ] 3.0 Implement Review Submission Form
   - [ ] 3.1 Create the `race-review-form.tsx` component.
   - [ ] 3.2 Add a form with a `textarea` for the review and a `button` for submission.
