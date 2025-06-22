@@ -2,6 +2,7 @@
 import { notFound } from "next/navigation";
 
 import { RaceReviewForm } from "@/components/races/race-review-form";
+import { RaceReviewList } from "@/components/races/race-review-list";
 import { grandPrixes } from "@/lib/mock-data";
 
 export default function RacePage({ params }: { params: { raceId: string } }) {
@@ -18,7 +19,9 @@ export default function RacePage({ params }: { params: { raceId: string } }) {
         <div>
           <RaceReviewForm />
         </div>
-        <div>{/* Reviews list will go here */}</div>
+        <div>
+          <RaceReviewList reviews={race.reviews} />
+        </div>
       </div>
     </main>
   );

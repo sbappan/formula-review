@@ -25,6 +25,8 @@
 - [x] 3.0 Implement Review Submission Form
   - [x] 3.1 Create the `race-review-form.tsx` component.
   - [x] 3.2 Add a form with a `textarea` for the review and a `button` for submission.
+  - [x] 3.3 Add a star rating component to the form (we can use an existing library or a simple custom one).
+  - [x] 3.4 Import and render the form on the main review page.
 - [ ] 4.0 Implement Reviews List
   - [ ] 4.1 Create the `race-review-list.tsx` component that takes a list of reviews as a prop.
   - [ ] 4.2 Create the `race-review-card.tsx` component to display a single review's details (author, rating, text).
