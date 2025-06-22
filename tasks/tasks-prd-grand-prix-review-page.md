@@ -27,12 +27,12 @@
   - [x] 3.2 Add a form with a `textarea` for the review and a `button` for submission.
   - [x] 3.3 Add a star rating component to the form (we can use an existing library or a simple custom one).
   - [x] 3.4 Import and render the form on the main review page.
-- [ ] 4.0 Implement Reviews List
-  - [ ] 4.1 Create the `race-review-list.tsx` component that takes a list of reviews as a prop.
-  - [ ] 4.2 Create the `race-review-card.tsx` component to display a single review's details (author, rating, text).
-  - [ ] 4.3 `race-review-list.tsx` should map over the reviews and render a `race-review-card.tsx` for each one.
-  - [ ] 4.4 Import and render the list on the main review page, passing the mock reviews data.
-- [ ] 5.0 Assemble and Style the Page
-  - [ ] 5.1 Use `shadcn/ui` components (`Card`, `Button`, `Textarea`, etc.) to style the form and review list.
-  - [ ] 5.2 Arrange the form and the review list on the page using Flexbox or CSS Grid.
-  - [ ] 5.3 Ensure the page is responsive and follows the existing site's design language.
+- [x] 4.0 Implement Reviews List
+  - [x] 4.1 Create the `race-review-list.tsx` component that takes a list of reviews as a prop.
+  - [x] 4.2 Create the `race-review-card.tsx` component to display a single review's details (author, rating, text).
+  - [x] 4.3 `race-review-list.tsx` should map over the reviews and render a `race-review-card.tsx` for each one.
+  - [x] 4.4 Import and render the list on the main review page, passing the mock reviews data.
+- [x] 5.0 Assemble and Style the Page
+  - [x] 5.1 Use `shadcn/ui` components (`Card`, `Button`, `Textarea`, etc.) to style the form and review list.
+  - [x] 5.2 Arrange the form and the review list on the page using Flexbox or CSS Grid.
+  - [x] 5.3 Ensure the page is responsive and follows the existing site's design language.
