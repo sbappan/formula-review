@@ -15,8 +15,8 @@
 ## Tasks
 
 - [ ] 1.0 Setup Mock Data and Types
-  - [ ] 1.1 Define `Race` and `Review` types in `src/lib/types.ts`.
-  - [ ] 1.2 Create mock data for one sample Grand Prix and several reviews in `src/lib/mock-data.ts`.
+  - [x] 1.1 Define `Race` and `Review` types in `src/lib/types.ts`.
+  - [x] 1.2 Create mock data for one sample Grand Prix and several reviews in `src/lib/mock-data.ts`.
 - [ ] 2.0 Create the Race Review Page Structure
   - [ ] 2.1 Create the directory `src/app/races/[raceId]`.
   - [ ] 2.2 Create the page file `src/app/races/[raceId]/page.tsx`.
