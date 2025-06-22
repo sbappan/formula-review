@@ -1,6 +1,7 @@
 /* eslint-disable check-file/folder-naming-convention */
 import { notFound } from "next/navigation";
 
+import { RaceReviewForm } from "@/components/races/race-review-form";
 import { grandPrixes } from "@/lib/mock-data";
 
 export default function RacePage({ params }: { params: { raceId: string } }) {
@@ -13,8 +14,10 @@ export default function RacePage({ params }: { params: { raceId: string } }) {
   return (
     <main className="container mx-auto px-4 py-8">
       <h1 className="mb-8 text-center text-4xl font-bold">{race.name}</h1>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-        <div>{/* Review form will go here */}</div>
+      <div className="mx-auto max-w-xl space-y-8">
+        <div>
+          <RaceReviewForm />
+        </div>
         <div>{/* Reviews list will go here */}</div>
       </div>
     </main>
