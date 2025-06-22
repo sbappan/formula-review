@@ -37,7 +37,8 @@ const eslintConfig = [
       "check-file/folder-naming-convention": [
         "error",
         {
-          "src/**/": "KEBAB_CASE",
+          "src/components/**/": "KEBAB_CASE",
+          "src/lib/**/": "KEBAB_CASE",
         },
       ],
     },
