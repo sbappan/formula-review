@@ -5,12 +5,13 @@ import { RaceReviewForm } from "@/components/races/race-review-form";
 import { RaceReviewList } from "@/components/races/race-review-list";
 import { grandPrixes } from "@/lib/mock-data";
 
-type RacePageProps = {
+type PageProps = {
   params: Promise<{ raceId: string }>;
 };
 
-export default function RacePage({ params }: RacePageProps) {
-  const race = grandPrixes.find(async (gp) => gp.id === (await params).raceId);
+export default async function RacePage({ params }: PageProps) {
+  const { raceId } = await params;
+  const race = grandPrixes.find((gp) => gp.id === raceId);
 
   if (!race) {
     notFound();
