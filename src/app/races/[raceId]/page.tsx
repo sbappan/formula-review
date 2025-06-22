@@ -1,15 +1,18 @@
+"use client";
+
 import { notFound } from "next/navigation";
+import { use } from "react";
 
 import { RaceReviewForm } from "@/components/races/race-review-form";
 import { RaceReviewList } from "@/components/races/race-review-list";
 import { grandPrixes } from "@/lib/mock-data";
 
 type PageProps = {
-  params: { raceId: string };
+  params: Promise<{ raceId: string }>;
 };
 
 export default function RacePage({ params }: PageProps) {
-  const { raceId } = params;
+  const { raceId } = use(params);
   const race = grandPrixes.find((gp) => gp.id === raceId);
 
   if (!race) {
