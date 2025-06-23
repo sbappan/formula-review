@@ -7,7 +7,7 @@ import Providers from "@/components/providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Formula Review",
+  title: "BoxBox BoxBox",
   description: "Website to review GPs",
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({
       </head>
       <body>
         <Providers>
-          <div className="relative flex min-h-screen w-full flex-col before:absolute before:inset-0 before:-z-10 before:bg-[url(/light-bg-2.svg)] before:bg-cover before:bg-repeat before:opacity-20 sm:px-20 dark:before:opacity-30">
+          <div className="relative flex min-h-screen w-full flex-col before:absolute before:inset-0 before:-z-10 before:bg-[url(/light-bg-2.svg)] before:bg-repeat before:opacity-20 sm:px-20 sm:before:bg-cover sm:before:bg-no-repeat dark:before:opacity-30">
             <Header />
             <main className="relative flex w-full flex-grow flex-col gap-[32px] px-8 py-8">
               {children}
