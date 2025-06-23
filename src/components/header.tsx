@@ -6,39 +6,64 @@ import { useSession } from "next-auth/react";
 
 import {
   NavigationMenu,
+  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { ModeToggle } from "@/components/ui/theme-switcher";
+import { races2025 } from "@/lib/mock-data";
 
 import AuthButton from "./auth-button";
+import ListItem from "./list-item";
 
 export default function Header() {
   const { status } = useSession();
   return (
-    <header className="px-8 py-4 sm:px-20">
+    <header className="px-4 py-4 sm:px-20">
       <div className="flex items-center justify-between">
         <NavigationMenu>
           <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link href="/">Home</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
             {status === "authenticated" && (
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  asChild
-                  className={navigationMenuTriggerStyle()}
-                >
-                  <Link href="/dashboard">Dashboard</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
+              <>
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    asChild
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    <Link href="/dashboard">Dashboard</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    asChild
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    <Link href="/profile">Profile</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>2025</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[calc(100vw-2rem)] gap-3 p-4 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                      {races2025.map((race) => (
+                        <li key={race.id}>
+                          <NavigationMenuLink asChild>
+                            <Link href={`/races/${race.id}`} passHref>
+                              <ListItem
+                                title={race.name}
+                                latestRace={race.latestRace}
+                              />
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </>
             )}
           </NavigationMenuList>
         </NavigationMenu>
