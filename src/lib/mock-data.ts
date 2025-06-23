@@ -1,55 +1,96 @@
-import { Race } from "./types";
+import { Race, Review } from "./types";
 
-export const latestReviews = [
+export const reviews: Review[] = [
   {
     id: "1",
     author: "Alex Hamilton",
-    race: "Austrian Grand Prix 2025",
+    raceId: "austrian-grand-prix-2025",
     rating: 5,
-    comment:
-      "What a race! The last lap was a nail-biter. The atmosphere at the Red Bull Ring was electric.",
+    text: "What a race! The last lap was a nail-biter. The atmosphere at the Red Bull Ring was electric.",
   },
   {
     id: "2",
     author: "Maria Rossi",
-    race: "Austrian Grand Prix 2025",
+    raceId: "austrian-grand-prix-2025",
     rating: 4,
-    comment:
-      "Great racing throughout the field. Overtaking was a bit difficult in the middle sector, but the strategy calls made it exciting.",
+    text: "Great racing throughout the field. Overtaking was a bit difficult in the middle sector, but the strategy calls made it exciting.",
   },
   {
     id: "3",
     author: "Kenji Tanaka",
-    race: "Austrian Grand Prix 2025",
+    raceId: "austrian-grand-prix-2025",
     rating: 5,
-    comment:
-      "Absolutely brilliant! My first time at a Grand Prix, and it exceeded all expectations. The fan zone was also fantastic.",
+    text: "Absolutely brilliant! My first time at a Grand Prix, and it exceeded all expectations. The fan zone was also fantastic.",
+  },
+  {
+    id: "4",
+    author: "John Doe",
+    raceId: "austrian-grand-prix-2025",
+    rating: 3,
+    text: "The race was good, but the atmosphere was not as expected.",
+  },
+  {
+    id: "5",
+    author: "John Doe",
+    raceId: "austrian-grand-prix-2025",
+    rating: 3,
+    text: "The race was good, but the atmosphere was not as expected.",
+  },
+  {
+    id: "6",
+    author: "John Doe",
+    raceId: "austrian-grand-prix-2025",
+    rating: 3,
+    text: "The race was good, but the atmosphere was not as expected.",
+  },
+  {
+    id: "7",
+    author: "John Doe",
+    raceId: "austrian-grand-prix-2025",
+    rating: 3,
+    text: "The race was good, but the atmosphere was not as expected.",
+  },
+  {
+    id: "8",
+    author: "John Doe",
+    raceId: "austrian-grand-prix-2025",
+    rating: 3,
+    text: "The race was good, but the atmosphere was not as expected.",
+  },
+  {
+    id: "9",
+    author: "John Doe",
+    raceId: "austrian-grand-prix-2025",
+    rating: 3,
+    text: "The race was good, but the atmosphere was not as expected.",
   },
 ];
 
-export const grandPrixes: Race[] = [
-  {
-    id: "1",
-    name: "Austrian Grand Prix 2025",
-    reviews: [
-      {
-        id: "1",
-        author: "Alex Hamilton",
-        rating: 5,
-        text: "What a race! The last lap was a nail-biter. The atmosphere at the Red Bull Ring was electric.",
-      },
-      {
-        id: "2",
-        author: "Maria Rossi",
-        rating: 4,
-        text: "Great racing throughout the field. Overtaking was a bit difficult in the middle sector, but the strategy calls made it exciting.",
-      },
-      {
-        id: "3",
-        author: "Kenji Tanaka",
-        rating: 5,
-        text: "Absolutely brilliant! My first time at a Grand Prix, and it exceeded all expectations. The fan zone was also fantastic.",
-      },
-    ],
-  },
+export const races2025: Race[] = [
+  { id: "austrian-grand-prix-2025", name: "Austrian GP", latestRace: true },
+  { id: "british-grand-prix-2025", name: "British GP" },
+  { id: "belgian-grand-prix-2025", name: "Belgian GP" },
+  { id: "hungarian-grand-prix-2025", name: "Hungarian GP" },
+  { id: "dutch-grand-prix-2025", name: "Dutch GP" },
+  { id: "italian-grand-prix-2025", name: "Italian GP" },
+  { id: "azerbaijan-grand-prix-2025", name: "Azerbaijan GP" },
+  { id: "singapore-grand-prix-2025", name: "Singapore GP" },
+  { id: "united-states-grand-prix-2025", name: "United States GP" },
+  { id: "mexico-city-grand-prix-2025", name: "Mexico City GP" },
+  { id: "são-paulo-grand-prix-2025", name: "São Paulo GP" },
+  { id: "las-vegas-grand-prix-2025", name: "Las Vegas GP" },
+  { id: "qatar-grand-prix-2025", name: "Qatar GP" },
+  { id: "abu-dhabi-grand-prix-2025", name: "Abu Dhabi GP" },
+  { id: "australian-grand-prix-2025", name: "Australian GP" },
+  { id: "chinese-grand-prix-2025", name: "Chinese GP" },
+  { id: "japanese-grand-prix-2025", name: "Japanese GP" },
+  { id: "bahrain-grand-prix-2025", name: "Bahrain GP" },
+  { id: "saudi-arabian-grand-prix-2025", name: "Saudi Arabian GP" },
+  { id: "miami-grand-prix-2025", name: "Miami GP" },
+  { id: "emilia-romagna-grand-prix-2025", name: "Emilia Romagna GP" },
+  { id: "monaco-grand-prix-2025", name: "Monaco GP" },
+  { id: "spanish-grand-prix-2025", name: "Spanish GP" },
+  { id: "canadian-grand-prix-2025", name: "Canadian GP" },
 ];
+
+export const grandPrixes: Race[] = [...races2025];
