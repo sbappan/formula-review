@@ -1,13 +1,18 @@
-"use client";
-
-import { notFound, useParams } from "next/navigation";
+import { notFound } from "next/navigation";
 
 import { RaceReviewForm } from "@/components/races/race-review-form";
 import { RaceReviewList } from "@/components/races/race-review-list";
 import { grandPrixes, reviews } from "@/lib/mock-data";
+import requireAuth from "@/utils/require-auth";
 
-export default function RacePage() {
-  const { raceId } = useParams<{ raceId: string }>();
+export default async function RacePage({
+  params,
+}: {
+  params: { raceId: string };
+}) {
+  await requireAuth();
+  const { raceId: encodedRaceId } = params;
+  const raceId = decodeURIComponent(encodedRaceId);
   const race = grandPrixes.find((gp) => gp.id === raceId);
   const year = raceId.split("-").at(-1);
 
