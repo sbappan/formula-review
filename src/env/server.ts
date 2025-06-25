@@ -8,6 +8,12 @@ export const env = createEnv({
     NEXTAUTH_SECRET: z.string(),
     GOOGLE_CLIENT_ID: z.string(),
     GOOGLE_CLIENT_SECRET: z.string(),
+    DATABASE_URL: z.string().url(),
+    DB_MIGRATING: z
+      .string()
+      .refine((s) => s === "true" || s === "false")
+      .transform((s) => s === "true")
+      .optional(),
   },
   onValidationError: (error) => {
     const fieldErrors = error.reduce<Record<string, string[]>>((acc, err) => {
@@ -28,4 +34,4 @@ export const env = createEnv({
   experimental__runtimeEnv: process.env,
 });
 
-console.log(env);
+// console.log(env);
