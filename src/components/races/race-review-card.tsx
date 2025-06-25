@@ -13,7 +13,7 @@ export function RaceReviewCard({ review }: RaceReviewCardProps) {
       <CardHeader>
         <div className="flex items-start justify-between">
           <div>
-            <CardTitle className="text-lg">{review.author}</CardTitle>
+            <CardTitle className="text-lg">{review.authorName}</CardTitle>
             <div className="mt-1 flex items-center">
               {[1, 2, 3, 4, 5].map((star) => (
                 <StarIcon
@@ -31,7 +31,7 @@ export function RaceReviewCard({ review }: RaceReviewCardProps) {
         </div>
       </CardHeader>
       <CardContent>
-        <p className="text-gray-700 dark:text-gray-300">{review.text}</p>
+        <p className="text-gray-700 dark:text-gray-300">{review.comment}</p>
       </CardContent>
     </Card>
   );
