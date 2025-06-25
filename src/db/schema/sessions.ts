@@ -1,6 +1,6 @@
 import { pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
 
-import { users } from "./users";
+import users from "./users";
 
 const sessions = pgTable("session", {
   sessionToken: text("sessionToken").primaryKey(),

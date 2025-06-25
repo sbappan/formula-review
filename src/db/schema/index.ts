@@ -1,3 +1,15 @@
-export { default as accounts } from "./accounts";
-export { default as sessions } from "./sessions";
-export { default as users } from "./users";
+import accounts from "./accounts";
+import raceReviews, { raceReviewsRelations } from "./race-reviews";
+import races from "./races";
+import sessions from "./sessions";
+import users, { usersRelations } from "./users";
+
+export {
+  accounts,
+  raceReviews,
+  raceReviewsRelations,
+  races,
+  sessions,
+  users,
+  usersRelations,
+};

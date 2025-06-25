@@ -8,6 +8,13 @@
       "when": 1750787966673,
       "tag": "0000_warm_gabe_jones",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1750883231693,
+      "tag": "0001_chief_thunderball",
+      "breakpoints": true
     }
   ]
 }
