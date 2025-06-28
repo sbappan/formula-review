@@ -1,6 +1,5 @@
 import { relations } from "drizzle-orm";
 import { integer, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
-import { z } from "zod";
 
 import races from "./races";
 import users from "./users";
@@ -25,15 +24,5 @@ export const raceReviewsRelations = relations(raceReviews, ({ one }) => ({
     references: [users.id],
   }),
 }));
-
-export const InsertRaceReviewSchema = z.object({
-  raceId: z.string(),
-  rating: z.coerce
-    .number()
-    .int()
-    .min(1, { message: "Rating is required" })
-    .max(5),
-  comment: z.string().optional(),
-});
 
 export default raceReviews;
